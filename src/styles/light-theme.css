@@ -1,0 +1,338 @@
+/* ============================================
+   TEMA LIGHT - IDENTIDADE VISUAL OFICIAL
+   Baseado no site e documentos da Light
+   ============================================ */
+
+/* VARIÁVEIS GLOBAIS */
+:root {
+  /* Cores primárias Light */
+  --light-azul: #003366;
+  --light-azul-escuro: #002244;
+  --light-azul-claro: #004080;
+  --light-azul-hover: #1E4A7A;
+  
+  /* Cores de fundo */
+  --light-cinza-fundo: #F5F5F5;
+  --light-cinza-medio: #E5E5E5;
+  --light-cinza-borda: #CCCCCC;
+  
+  /* Cores de texto */
+  --light-texto-principal: #333333;
+  --light-texto-secundario: #666666;
+  --light-texto-claro: #999999;
+  --light-branco: #FFFFFF;
+  
+  /* Cores de alerta */
+  --light-aviso: #D32F2F;
+  --light-alerta: #FBC02D;
+  --light-sucesso: #388E3C;
+  
+  /* Tipografia */
+  --light-fonte-principal: 'Arial', sans-serif;
+  --light-fonte-titulo: 'Arial Black', 'Arial', sans-serif;
+  
+  /* Espaçamentos */
+  --light-padding-padrao: 12px;
+  --light-padding-grande: 24px;
+  --light-margin-padrao: 16px;
+  --light-borda-arredondamento: 4px;
+  --light-sombra: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ===== ESTILOS GLOBAIS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--light-fonte-principal);
+  background-color: var(--light-cinza-fundo);
+  color: var(--light-texto-principal);
+  line-height: 1.6;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.container-light {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--light-padding-grande);
+}
+
+/* ===== CABEÇALHO LIGHT ===== */
+.header-light {
+  background-color: var(--light-azul);
+  color: var(--light-branco);
+  padding: var(--light-padding-grande);
+  box-shadow: var(--light-sombra);
+}
+
+.header-light .container-light {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--light-padding-grande);
+}
+
+.header-light h1 {
+  font-family: var(--light-fonte-titulo);
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.header-light .subtitle {
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+}
+
+/* ===== FORMULÁRIO PRINCIPAL ===== */
+.formulario-light {
+  background-color: var(--light-branco);
+  border: 2px solid var(--light-azul);
+  border-radius: var(--light-borda-arredondamento);
+  box-shadow: var(--light-sombra);
+  margin: var(--light-margin-padrao) 0;
+}
+
+.formulario-header {
+  background-color: var(--light-azul);
+  color: var(--light-branco);
+  padding: var(--light-padding-grande);
+  border-radius: var(--light-borda-arredondamento) var(--light-borda-arredondamento) 0 0;
+  text-align: center;
+}
+
+.formulario-header h2 {
+  font-family: var(--light-fonte-titulo);
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.formulario-header .anexo {
+  font-size: 12px;
+  color: var(--light-alerta);
+  margin-top: 8px;
+}
+
+.formulario-corpo {
+  padding: var(--light-padding-grande);
+}
+
+/* ===== SEÇÕES DO FORMULÁRIO ===== */
+.secao-form {
+  margin-bottom: 30px;
+  border-left: 4px solid var(--light-azul);
+  padding-left: 16px;
+}
+
+.secao-form h3 {
+  color: var(--light-azul);
+  font-family: var(--light-fonte-titulo);
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+/* ===== CAMPOS DO FORMULÁRIO ===== */
+.campo-light {
+  margin-bottom: 16px;
+}
+
+.campo-light label {
+  display: block;
+  color: var(--light-texto-principal);
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.campo-light input,
+.campo-light select,
+.campo-light textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--light-cinza-borda);
+  border-radius: var(--light-borda-arredondamento);
+  font-family: var(--light-fonte-principal);
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.campo-light input:focus,
+.campo-light select:focus,
+.campo-light textarea:focus {
+  outline: none;
+  border-color: var(--light-azul);
+  box-shadow: 0 0 0 3px rgba(0,51,102,0.1);
+}
+
+.campo-light input:hover,
+.campo-light select:hover,
+.campo-light textarea:hover {
+  border-color: var(--light-azul-claro);
+}
+
+.campo-obrigatorio label::after {
+  content: " *";
+  color: var(--light-aviso);
+  font-weight: bold;
+}
+
+/* ===== GRIDS ===== */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* ===== BOTÕES ===== */
+.btn-light {
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--light-borda-arredondamento);
+  font-family: var(--light-fonte-titulo);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-light-primary {
+  background-color: var(--light-azul);
+  color: var(--light-branco);
+}
+
+.btn-light-primary:hover {
+  background-color: var(--light-azul-claro);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,51,102,0.2);
+}
+
+.btn-light-primary:active {
+  transform: translateY(0);
+}
+
+.btn-light-secondary {
+  background-color: var(--light-branco);
+  color: var(--light-azul);
+  border: 2px solid var(--light-azul);
+}
+
+.btn-light-secondary:hover {
+  background-color: var(--light-cinza-medio);
+  transform: translateY(-1px);
+}
+
+/* ===== TABELAS ===== */
+.tabela-light {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.tabela-light th {
+  background-color: var(--light-azul);
+  color: var(--light-branco);
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.tabela-light td {
+  border: 1px solid var(--light-cinza-borda);
+  padding: 10px;
+  font-size: 14px;
+}
+
+.tabela-light tr:nth-child(even) {
+  background-color: var(--light-cinza-fundo);
+}
+
+.tabela-light tr:hover {
+  background-color: var(--light-cinza-medio);
+}
+
+/* ===== CARDS ===== */
+.card-light {
+  background-color: var(--light-branco);
+  border: 1px solid var(--light-cinza-borda);
+  border-radius: var(--light-borda-arredondamento);
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.card-light:hover {
+  box-shadow: var(--light-sombra);
+  border-color: var(--light-azul-claro);
+}
+
+.card-light h4 {
+  color: var(--light-azul);
+  margin-bottom: 12px;
+  font-family: var(--light-fonte-titulo);
+}
+
+/* ===== AVISOS E MENSAGENS ===== */
+.aviso-light {
+  background-color: #FFF3E0;
+  border-left: 4px solid var(--light-alerta);
+  padding: 16px;
+  margin: 20px 0;
+  border-radius: 0 var(--light-borda-arredondamento) var(--light-borda-arredondamento) 0;
+}
+
+.aviso-importante {
+  background-color: #FFEBEE;
+  border-left-color: var(--light-aviso);
+}
+
+.mensagem-sucesso {
+  background-color: #E8F5E9;
+  border-left: 4px solid var(--light-sucesso);
+  padding: 16px;
+  margin: 20px 0;
+}
+
+/* ===== RODAPÉ ===== */
+.footer-light {
+  background-color: var(--light-cinza-fundo);
+  border-top: 2px solid var(--light-cinza-borda);
+  padding: var(--light-padding-grande);
+  text-align: center;
+  font-size: 12px;
+  color: var(--light-texto-secundario);
+  margin-top: 40px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .grid-2, .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-light .container-light {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .btn-light {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+
+/* ===== UTILITÁRIOS ===== */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }
+.pt-20 { padding-top: 20px; }
+.pb-20 { padding-bottom: 20px; }
